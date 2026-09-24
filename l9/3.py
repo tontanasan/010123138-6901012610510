@@ -11,12 +11,12 @@ class Person:
         return bmi
         
         
-class Student (Person):
-    def __init__(self,name,address,wight,height,student_id,course,gpa):
+class Employee (Person):
+    def __init__(self,name,address,wight,height,employee_id, departmet, salary):
         super().__init__(name,address,wight,height)
-        self.student_id = student_id
-        self.course = course
-        self.gpa = gpa
+        self.employee_id = employee_id
+        self.departmet = course
+        self.salary = salary
         
     def __str__(self):
         return f"""
@@ -24,13 +24,13 @@ name : {self.name}
 address : {self.address}
 wight : {self.wight}
 height : {self.height}
-student_id : {self.student_id}
-course : {self.course}
+student_id : {self.employee_id}
+course : {self.salary}
 bmi : {self.getBMI()}
 """
     def show(self):
         print(self.getBMI())
         print(self)
 
-p1=Student("ton","kmutnb",70,178,111,"cpre",2.5)
-p1.show()
+e1=Employee("ton","kmutnb",70,178,111,"computer",15000)
+e1.show()
